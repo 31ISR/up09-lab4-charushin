@@ -32,4 +32,10 @@ urlpatterns = [
     # Маршрут, связывающий URL `/about/` с функцией `about` из модуля `views`.
     # Когда пользователь открывает `/about/`, вызывается функция `about`, которая,
     # в данном случае, возвращает HTML-шаблон "about.html".
+    path('glav/', views.about),
+    # Маршрут, связывающий URL `/about/` с функцией `about` из модуля `views`.
+    # Когда пользователь открывает `/about/`, вызывается функция `about`, которая,
+    # в данном случае, возвращает HTML-шаблон "about.html".
+    path('posts/', include('posts.urls')),
+    path('communities/', include('communities.urls')),
 ]
