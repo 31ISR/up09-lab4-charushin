@@ -9,28 +9,14 @@
         <script src="{% static 'js/main.js' %}" defer></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#">Мой Сайт</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Обо мне</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#posts">Посты</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#groups">Группы</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <main>{% block content %} {% endblock %}</main>
+        <header>
+            <a href="/">Главная страница</a>
+            <a href="/about">Обо мне</a>
+            <a href="/posts">Посты</a>
+            <a href="/communities">Группы</a>
+        </header>
+        <div class="container">
+            <main>{% block content %} {% endblock %}</main>
+        </div>
     </body>
 </html>

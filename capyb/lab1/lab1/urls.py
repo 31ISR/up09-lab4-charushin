@@ -21,21 +21,9 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    # Объявление переменной `urlpatterns`, которая содержит список маршрутов
-    # (URL-адресов) для сопоставления запросов с обработчиками.
-
     path('admin/', admin.site.urls),
-    # Маршрут, связывающий URL `/admin/` с встроенным интерфейсом администратора Django.
-    # `admin.site.urls` — это готовый обработчик, предоставляемый Django для работы с админкой.
-
     path('about/', views.about),
-    # Маршрут, связывающий URL `/about/` с функцией `about` из модуля `views`.
-    # Когда пользователь открывает `/about/`, вызывается функция `about`, которая,
-    # в данном случае, возвращает HTML-шаблон "about.html".
-    path('glav/', views.about),
-    # Маршрут, связывающий URL `/about/` с функцией `about` из модуля `views`.
-    # Когда пользователь открывает `/about/`, вызывается функция `about`, которая,
-    # в данном случае, возвращает HTML-шаблон "about.html".
     path('posts/', include('posts.urls')),
     path('communities/', include('communities.urls')),
+     path('', views.about),
 ]
