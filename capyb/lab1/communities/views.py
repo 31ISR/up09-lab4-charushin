@@ -6,8 +6,8 @@ def communities_list(request):
     return render(request, 'communities/communities_list.html', {'communities': communities})
 
 def community_page(request, slug):
-    post = Community.objects.get(slug=slug)
-    return render(request, 'communities/community_page.html', {'communities': communities})
+    community = Community.objects.get(slug=slug)
+    return render(request, 'communities/community_page.html', {'community': community})
 
 
 
