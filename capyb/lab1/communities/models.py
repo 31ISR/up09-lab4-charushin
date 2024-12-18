@@ -6,6 +6,8 @@ class Community(models.Model):
     slug = models.SlugField(unique=True)
     date = models.DateTimeField(auto_now_add=True, null=True)
     free = models.BooleanField(default=False)
-
+    banner = models.ImageField(default='fallback.png', blank=True)
     def __str__(self):
         return self.name
+
+
