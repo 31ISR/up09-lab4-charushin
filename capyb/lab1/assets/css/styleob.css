@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom right, #e2e2e2, #b4b4b4);
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #4A4A4A;
+    position: relative;
+    transition: color 0.3s, transform 0.2s;
+}
+
+a:hover {
+    color: #007BFF;
+    transform: translateY(-2px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+header a {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+header a:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 20px auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header a {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}

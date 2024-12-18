@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{% block title %} Приложение Django {% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/styleob.css' %}" />
         <script src="{% static 'js/main.js' %}" defer></script>
     </head>
     <body>
@@ -16,8 +16,9 @@
             <a href="{% url 'communities:list' %}">Группы</a>
 
             {% if user.is_authenticated %}
+                <a href="{% url 'posts:new-post' %}">Новый пост</a>
                 <a href="{% url 'communities:community-new' %}">Создать новую группу</a>
-                <form class="logout" action="{% url 'users:logout' %}" method="post">
+                <form class="logout" action="{% url 'users:logout' %}" method="post" style="display:inline;">
                     {% csrf_token %}
                     <button title="User Logout">Выйти</button>
                 </form>
