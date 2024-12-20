@@ -17,10 +17,10 @@
 
             {% if user.is_authenticated %}
                 <a href="{% url 'posts:new-post' %}">Новый пост</a>
-                <a href="{% url 'communities:community-new' %}">Создать новое сообщество</a>
+                <a href="{% url 'communities:community-new' %}">Создать новую группу</a>
                 <form class="logout" action="{% url 'users:logout' %}" method="post" style="display:inline;">
                     {% csrf_token %}
-                    <button class="logout-button" title="User Logout">Выйти</button>
+                    <button class="logout-button" title="User Logout"><h3>Выйти</h3></button>
                 </form>
             {% else %}
                 <a href="{% url 'users:register' %}" class="register-button">Зарегистрироваться</a>
