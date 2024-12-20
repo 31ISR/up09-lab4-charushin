@@ -20,10 +20,10 @@
                 <a href="{% url 'communities:community-new' %}">Создать новое сообщество</a>
                 <form class="logout" action="{% url 'users:logout' %}" method="post" style="display:inline;">
                     {% csrf_token %}
-                    <button title="User Logout">Выйти</button>
+                    <button class="logout-button" title="User Logout">Выйти</button>
                 </form>
             {% else %}
-                <a href="{% url 'users:register' %}">Зарегистрироваться</a>
+                <a href="{% url 'users:register' %}" class="register-button">Зарегистрироваться</a>
                 <a href="{% url 'users:login' %}">Войти</a>
             {% endif %}
         </header>
